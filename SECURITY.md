@@ -9,9 +9,12 @@ or contact the maintainers directly rather than filing a public issue.
 
 We aim to acknowledge reports within a few business days.
 
-## Secrets never belong in this repo
+> This repo is an **index** and holds no product code. Each tool enforces its own security policy
+> in its own repository — but the rules below apply everywhere, here and across every tool repo.
 
-This is a **public** repository. The following must **never** be committed:
+## Secrets never belong in these repos
+
+These are **public** repositories. The following must **never** be committed:
 
 - API keys, private integration tokens (`pit-...`), OAuth secrets
 - Firebase auth tokens, refresh tokens, ID tokens, session cookies

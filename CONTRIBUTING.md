@@ -1,62 +1,29 @@
 # Contributing to MoggingLabs Internals
 
-Thanks for taking the time to contribute! This repo groups several independent tools, so this
-guide covers the shared conventions. Each tool folder may add its own `CONTRIBUTING` notes on
-top of these.
+This repo is an **index/hub**, not a code monorepo. It holds no product code — each tool lives in
+its own repository. So "contributing" here means one of two things:
 
-## Ground rules
+## 1. Adding or updating a tool link
 
-1. **Never commit secrets.** No API keys, tokens, `.env` files, cookies, HAR captures, or
-   account IDs — yours or anyone else's. See [SECURITY.md](./SECURITY.md). Every tool ships a
-   `.env.example` with placeholders; copy it to `.env` locally and keep `.env` gitignored.
-2. **One tool per folder.** Keep changes scoped to the tool you're working on unless you're
-   touching shared root docs.
-3. **Be kind.** See the [Code of Conduct](./CODE_OF_CONDUCT.md).
+If you've built (or found a home for) a new internal tool:
 
-## Workflow
+1. Create the tool in its **own** repository under the
+   [MoggingLabs](https://github.com/MoggingLabs) org, with its own `README`, `LICENSE`, and docs.
+2. Add a row to the **The tools** table in [README.md](./README.md) linking to that repo.
+3. Open a PR here with just that change.
 
-```bash
-# 1. Fork and clone
-git clone git@github.com:<you>/mogginglabs-internals.git
-cd mogginglabs-internals
+Keep the description to one clear sentence — what the tool does and who it's for.
 
-# 2. Branch from main
-git checkout -b feat/<tool>-<short-description>
+## 2. Contributing to a specific tool
 
-# 3. Make your change inside the relevant tool folder
+Head to that tool's own repository and follow **its** `CONTRIBUTING.md`. For example, Highwire's
+contribution guide lives at [MoggingLabs/highwire](https://github.com/MoggingLabs/highwire).
 
-# 4. Commit with a clear, scoped message
-git commit -m "highwire: add opportunity pagination"
+## Ground rules (everywhere)
 
-# 5. Push and open a PR against main
-```
-
-### Commit message format
-
-Prefix with the tool name so history stays readable across the monorepo:
-
-```
-highwire: <what changed>
-<tool>: <what changed>
-```
-
-### Pull requests
-
-- Keep PRs focused — one concern per PR.
-- Describe **what** changed and **why**.
-- Confirm the "Never commit secrets" checklist in your PR description.
-- If you added or changed an internal-API endpoint mapping, update that tool's
-  `docs/` reference in the same PR.
-
-## Reporting bugs & requesting features
-
-Open a [GitHub Issue](https://github.com/MoggingLabs/mogginglabs-internals/issues) and label it
-with the tool name. Include repro steps, expected vs. actual behavior, and your environment
-(OS, Python/Node versions).
-
-## A note on responsible use
-
-Several tools here automate platforms via undocumented/internal APIs. Contributions must keep
-the **human-paced rate limiting** intact and must not add functionality whose purpose is to
-mass-target third parties or evade abuse protections for harmful ends. Automate your *own*
-accounts, respectfully. See each tool's README for the specifics.
+- **Never commit secrets** — no API keys, tokens, `.env` files, or account IDs, in this hub or in
+  any tool repo. See [SECURITY.md](./SECURITY.md).
+- **Be kind** — see the [Code of Conduct](./CODE_OF_CONDUCT.md).
+- Several of our tools automate platforms via internal APIs. Keep their rate-limiting intact and
+  don't add functionality meant to mass-target third parties or evade abuse protections for
+  harmful ends. Automate your *own* accounts, respectfully.
