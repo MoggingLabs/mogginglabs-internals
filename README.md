@@ -26,8 +26,17 @@ standalone repository; this page just points you to them.
 | Tool | What it does | Repo |
 | :--- | :--- | :--- |
 | **🎪 Highwire** | Drive GoHighLevel's full internal API from Claude via a custom MCP server — read and write everything the UI can, with built-in human-paced rate limiting. | [MoggingLabs/highwire](https://github.com/MoggingLabs/highwire) |
+| **🎙️ Closewire** | Configure Closebot AI appointment-setter bots from Claude via its official API — bots, personas, job-flows, conversations, and booking metrics. *(🚧 scaffold)* | [MoggingLabs/closewire](https://github.com/MoggingLabs/closewire) |
+| **🔁 Followwire** | Drive TeamFollowup.ai's AI voice-call follow-up from Claude — agents, campaigns/cadences, contacts, and call stats via its official API. *(🚧 scaffold)* | [MoggingLabs/followwire](https://github.com/MoggingLabs/followwire) |
+| **🔌 Nodewire** | Manage n8n workflows from Claude — clone/parameterize per-client automations and triage executions over the REST API. *(🚧 scaffold)* | [MoggingLabs/nodewire](https://github.com/MoggingLabs/nodewire) |
 
-*More tools will be added to this list as we build and open-source them — each in its own repo.*
+*More tools will be added to this list as we build and open-source them — each in its own repo. The
+🚧 scaffolds are new driver repos with READMEs + prior-art research; build not yet started.*
+
+See the **[Roadmap](./ROADMAP.md)** for what's coming and the order we're building it in: one
+Highwire-style *driver* per platform first (Closewire for Closebot, Followwire for TeamFollowup,
+Nodewire for n8n), then the cross-cutting tools that compose them, then the Ringmaster orchestrator
+last.
 
 ## Adding a new tool
 
