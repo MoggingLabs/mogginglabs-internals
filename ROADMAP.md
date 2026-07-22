@@ -149,6 +149,13 @@ built: it invents no new platform access, it only sequences tools that already w
   to the [README](./README.md) table when it's real.
 - **Driver shape:** typed client (official or replayed internal API) → safety/pacing layer → MCP
   server, one tool per action. Copy Highwire.
+- **Pacing is mandatory for internal/undocumented APIs.** Any driver that replays internal or
+  undocumented endpoints — or uses a captured session token — MUST route every call through a
+  **human-paced** layer: jittered human-timed delays, per-hour/day budgets, exponential backoff, a
+  circuit breaker, and dry-run. The point is to *humanize* traffic and avoid detection/suspension,
+  like Highwire. Sanctioned first-party public APIs still get polite rate-limiting, but the
+  humanization bar is highest whenever we're not on an official public API (e.g. Highwire's HighLevel
+  internal API; Followwire's undocumented TeamFollowup API + any session-token fallback).
 - **Naming:** drivers share a `-wire` family (Highwire, Closewire, Followwire, Nodewire); the
   higher-layer tools keep the circus / tightrope theme (Spotlight, Watchtower, Ringside, Marquee,
   Trueup, Ringmaster).
