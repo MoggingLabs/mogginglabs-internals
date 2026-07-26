@@ -153,9 +153,10 @@ descriptive names (like *MoggingLabs Workspace*), not the circus theme.
 | :--- | :--- | :--- |
 | [**Shotshelf**](https://github.com/MoggingLabs/shotshelf) | Cross-platform desktop shelf that auto-catches every screenshot + screen recording and keeps it one drag away. Local-only, no cloud. | 🚧 Scaffolded |
 
-Shotshelf's build is research-gated like the drivers: prior-art research first (fork-vs-build + Tauri
-vs Electron), then the numbered `prompts/` phases. The hard part is native drag-out on both Windows
-and macOS.
+Shotshelf's research is done: **build in Tauri v2** (no forkable cross-platform auto-catch shelf
+exists — that's the wedge), adopting `tauri-plugin-drag`/`drag-rs` for the crux (native drag-out,
+already solved on Win+mac), `notify` + `tauri-plugin-clipboard` for capture detection, and bundled
+ffmpeg for video thumbnails. Next: the numbered `prompts/` build phases.
 
 ---
 
