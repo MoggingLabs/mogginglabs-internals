@@ -29,9 +29,10 @@ standalone repository; this page just points you to them.
 | **🎙️ Closewire** | Configure Closebot AI appointment-setter bots from Claude via its official API — bots, personas, job-flows, conversations, and booking metrics. *(🚧 scaffold)* | [MoggingLabs/closewire](https://github.com/MoggingLabs/closewire) |
 | **🔁 Followwire** | Drive TeamFollowup.ai's AI voice-call follow-up from Claude — agents, campaigns/cadences, contacts, and call stats via its official API. *(🚧 scaffold)* | [MoggingLabs/followwire](https://github.com/MoggingLabs/followwire) |
 | **🔌 Nodewire** | Manage n8n workflows from Claude — clone/parameterize per-client automations and triage executions over the REST API. *(🚧 scaffold)* | [MoggingLabs/nodewire](https://github.com/MoggingLabs/nodewire) |
+| **📸 Shotshelf** | Cross-platform desktop shelf that auto-catches every screenshot & screen recording and keeps it one drag away. A standalone internal *utility*, not a `-wire` driver. *(🚧 scaffold)* | [MoggingLabs/shotshelf](https://github.com/MoggingLabs/shotshelf) |
 
 *More tools will be added to this list as we build and open-source them — each in its own repo. The
-🚧 scaffolds are new driver repos with READMEs + prior-art research; build not yet started.*
+🚧 scaffolds are new repos with READMEs + prior-art research; build not yet started.*
 
 See the **[Roadmap](./ROADMAP.md)** for what's coming and the order we're building it in: one
 Highwire-style *driver* per platform first (Closewire for Closebot, Followwire for TeamFollowup,

@@ -143,6 +143,22 @@ built: it invents no new platform access, it only sequences tools that already w
 
 ---
 
+## Internal utilities (outside the layered model)
+
+Not every internal tool is a platform driver or a composed agency tool. Standalone
+desktop/productivity utilities live here — they don't plug into the driver stack, and they use plain
+descriptive names (like *MoggingLabs Workspace*), not the circus theme.
+
+| Tool | What it is | Status |
+| :--- | :--- | :--- |
+| [**Shotshelf**](https://github.com/MoggingLabs/shotshelf) | Cross-platform desktop shelf that auto-catches every screenshot + screen recording and keeps it one drag away. Local-only, no cloud. | 🚧 Scaffolded |
+
+Shotshelf's build is research-gated like the drivers: prior-art research first (fork-vs-build + Tauri
+vs Electron), then the numbered `prompts/` phases. The hard part is native drag-out on both Windows
+and macOS.
+
+---
+
 ## Conventions
 
 - **One tool = one repo.** Each ships standalone with its own README/LICENSE, and gets a row added
